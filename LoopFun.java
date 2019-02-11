@@ -26,13 +26,24 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          //int index = 0;
-          //StringBuilder sb = new StringBuilder();
-           //index = index.nextIndexForAcronymChar ( phrase , index + 1);
+          String acronym = "";
           
-          //return  sb.toString().toUpperCase();
-          return null;
-      }
+            
+                acronym += phrase.toUpperCase().charAt(0);
+                for(int i = 1; i <= phrase.length()-1; i++)
+                {
+                    if(phrase.charAt( i - 1) ==' '|| phrase.charAt(i -1) == '-')
+                    {
+                        acronym +=phrase.toUpperCase().charAt(i);
+                    }
+                }
+                return acronym;
+            }
+        
+          
+        
+
+    
 
       /**
        * To prevent anyone from reading our messages, we can encrypt it so it will only be readable by its
@@ -46,7 +57,14 @@ public class LoopFun
        * @param word
        * @return the encrypted string by shifting each character by three character
        */
+        
       public String encrypt(String word) {
+          String myIpValue = "192.168.0.1";
+          //StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
+          //String enc = StandardPBEStringEncryptor.encrypt(word) ;
+          //encryptor.setPassword(word);
+           //String encrypted= encryptor.encrypt(word);
+          //return encrypted;
           return null;
       }
 }
