@@ -47,9 +47,19 @@ public class StringUtilities {
      */
     public String removeCharacter(String value, Character charToRemove) {
         
-       String strNew = value.replace("charToRemove" ,""); 
+       String strNew = value.replace(String.valueOf(charToRemove) ,""); 
        return strNew;
+       
+         /*StringBuffer r = new StringBuffer( value.length() );       
+         r.setLength( value.length() );
+       int current = 0;
+      for (int i = 0; i < value.length()-1; i ++) {
+         char cur = value.charAt(i);
+         if (cur != charToRemove) r.setCharAt( current++, cur );
+      }
+      return r.toString();*/
     }
+    
 
     /**
      * @param sentence String delimited by spaces representative of a sentence

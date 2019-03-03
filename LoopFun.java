@@ -59,12 +59,31 @@ public class LoopFun
        */
         
       public String encrypt(String word) {
-          String myIpValue = "192.168.0.1";
-          //StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-          //String enc = StandardPBEStringEncryptor.encrypt(word) ;
-          //encryptor.setPassword(word);
-           //String encrypted= encryptor.encrypt(word);
-          //return encrypted;
-          return null;
-      }
-}
+            String encryptedstr = "";
+            System.out.print('\u000C');
+            //String[] alphabet ={"a","b","c","d","e","f","g"};
+            //char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+                      //String[] alphabet = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+          char[] alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+          char[] arrayChar = word.toCharArray();
+          Integer lengthArr = alphabet.length;
+          String container = "";
+          //System.out.println( lengthArr );
+          for( char c : arrayChar){
+              Integer indexChar = new String(alphabet).indexOf(c);
+              //System.out.println(indexChar);
+              Integer indexUp = ((indexChar + 3)%lengthArr);
+              //System.out.println( " --> " +  indexUp + " - " + alphabet[indexUp]);
+              container += alphabet[indexUp];
+              //System.out.println( c + "-" + findIndex(alphabet,'b'));
+          }
+          //System.out.println(container);
+          return container;
+        }
+            
+          
+          
+        }
+    
+  
+
